@@ -1,0 +1,12 @@
+<% @products.each do |product| %>
+  <tr>
+    <td><%= product.name %></td>
+    <td><%= number_to_currency product.price %></td>
+    <td><%= link_to "", edit_product_path(product), remote: true, class: "btn btn-default glyphicon glyphicon-pencil" %></td>
+    <td><%= link_to "", product_delete_path(product), remote: true, class: "btn btn-danger glyphicon glyphicon-remove" %></td>
+
+   
+
+  </tr>
+<% end %>
+
